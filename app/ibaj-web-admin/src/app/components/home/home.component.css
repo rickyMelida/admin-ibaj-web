@@ -1,0 +1,25 @@
+.col-md-3 {
+  height: 230px;
+  background: rgb(114, 89, 89);
+}
+
+.col-md-3 span {
+  position: relative;
+  top: 50%;
+  font-weight: bold;
+  color: black;
+}
+
+#cover-page {
+  transition: 1s all;
+}
+
+#cover-page:hover {
+  cursor: pointer;
+  opacity: 0.8 !important;
+  transition: 1s all;
+  font-size: 24px;
+  color: aliceblue;
+}
+
+
