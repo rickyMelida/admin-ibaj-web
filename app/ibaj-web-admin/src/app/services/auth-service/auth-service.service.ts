@@ -11,12 +11,9 @@ export class AuthServiceService {
 
   constructor(private auth: AngularFireAuth) {
     auth.authState.subscribe( user =>{
-      console.log(user);
-
       if(!user) {
         return;
       }
-
       this.usuario.nombre = user.displayName;
       this.usuario.uid = user.uid;
     });
@@ -24,6 +21,10 @@ export class AuthServiceService {
 
   login() {
     this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+  }
+
+  loginEmail(email: string, pass: string) {
+    return this.auth.signInWithEmailAndPassword(email, pass);
   }
 
   logout() {

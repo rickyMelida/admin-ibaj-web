@@ -7,31 +7,28 @@
           Bienvenido
         </h3>
       </div>
-      <form>
+      <form #userForm="ngForm" (ngSubmit)="loginEmail()">
         <div class="form-group">
-          <label for="exampleInputEmail1">Nombre de usuario o correo</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          <label for="email">Nombre de usuario o correo</label>
+          <input type="email" class="form-control" id="email" name="emailUser" #emailUser="ngModel"
+            [(ngModel)]="login.email" required autocomplete="off">
+          <small *ngIf="!emailUser.valid && emailUser.touched" id="emailHelp" class="form-text text-danger">
+            Este campo deber ser rellenado
+          </small>
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Contraseña</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+          <label for="pass">Contraseña</label>
+          <input type="password" class="form-control" id="pass" name="passUser" #passUser="ngModel"
+            [(ngModel)]="login.pass">
         </div>
         <div class="form-group form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
         </div>
-        <button type="button" class="btn btn-primary btn-lg btn-block" (click)="ingresar('email')">Iniciar Sesión</button>
-        <button type="button" class="btn btn-dark btn-lg btn-block" (click)="ingresar('google')">Iniciar con Google</button>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Iniciar Sesión</button>
+        <!-- <button type="button" class="btn btn-dark btn-lg btn-block" (click)="ingresar('google')">Iniciar con Google</button> -->
       </form>
     </div>
     <div class="col-md-3"></div>
   </div>
-
-  <button class="btn btn-outline-danger" (click)="logout()">Salir</button>
-  <div *ngIf="existUser()">
-    <app-home></app-home>
-
-  </div>
-
 </div>

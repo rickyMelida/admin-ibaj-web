@@ -10,11 +10,11 @@
   color: black;
 }
 
-#cover-page {
+.col-md-3 {
   transition: 1s all;
 }
 
-#cover-page:hover {
+.col-md-3:hover {
   cursor: pointer;
   opacity: 0.8 !important;
   transition: 1s all;
