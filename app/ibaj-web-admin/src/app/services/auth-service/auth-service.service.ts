@@ -31,4 +31,12 @@ export class AuthServiceService {
     this.usuario = {}
     this.auth.signOut();
   }
+
+  existUser():boolean {
+    let user: boolean = false;
+    if(this.usuario.uid) {
+      user = true;
+    }
+    return user;
+  }
 }

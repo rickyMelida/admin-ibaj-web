@@ -19,14 +19,15 @@ export class HomeComponent implements OnInit {
     prayer: "",
     articles: ""
   };
-  user: boolean = false;
+
+  userExist: boolean;
 
   constructor(private _imageService: ImagesServiceService, private _sesion: AuthServiceService) { }
 
   ngOnInit(): void {
-    this.existUser();
-    console.log(this.user);
-    if(this.user) {
+    this.userExist = this._sesion.existUser();
+
+    if(this.userExist) {
       this.getBackgroundImages()
       .then(res => {
         this.backgroundImages.coverPage = res[0].main[0];
@@ -39,7 +40,6 @@ export class HomeComponent implements OnInit {
         this.setInElementsIdAndBackground(this.pages, this.backgroundImages);
       });
     }
-
   }
 
   getBackgroundImages() {
@@ -67,13 +67,6 @@ export class HomeComponent implements OnInit {
 
   logout() {
     this._sesion.logout();
-  }
-
-  existUser():boolean {
-    if(this._sesion.usuario.uid) {
-      this.user = true;
-    }
-    return this.user;
   }
 
 
