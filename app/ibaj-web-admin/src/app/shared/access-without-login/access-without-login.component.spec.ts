@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ActivitiesComponent } from './activities.component';
+import { AccessWithoutLoginComponent } from './access-without-login.component';
 
-describe('ActivitiesComponent', () => {
-  let component: ActivitiesComponent;
-  let fixture: ComponentFixture<ActivitiesComponent>;
+describe('AccessWithoutLoginComponent', () => {
+  let component: AccessWithoutLoginComponent;
+  let fixture: ComponentFixture<AccessWithoutLoginComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ActivitiesComponent ]
+      declarations: [ AccessWithoutLoginComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ActivitiesComponent);
+    fixture = TestBed.createComponent(AccessWithoutLoginComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

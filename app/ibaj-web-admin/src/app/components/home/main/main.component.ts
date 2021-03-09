@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { BackgroundImages } from 'src/app/interfaces/background-images.interfaces';
+import { BackgroundImages } from 'src/app/models/background-images.interfaces';
 import { ImagesServiceService } from "../../services/images-service/images-service.service";
 import { AuthServiceService } from '../../services/auth-service/auth-service.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.css']
 })
-export class HomeComponent implements OnInit {
+export class MainComponent implements OnInit {
   coverPage: HTMLElement;
   pages: Array<string> = ['cover-page', 'about', 'activities', 'counseling', 'prayer', 'articles'];
   backgroundImages: BackgroundImages = {
