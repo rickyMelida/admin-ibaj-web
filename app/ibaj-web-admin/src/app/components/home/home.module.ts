@@ -14,6 +14,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
     LoginComponent,
     MainComponent
   ],
+  exports: [
+    LoginComponent,
+    MainComponent
+  ],
   imports: [
     CommonModule,
     FormsModule,

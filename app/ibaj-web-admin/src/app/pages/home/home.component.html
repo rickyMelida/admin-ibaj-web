@@ -1,1 +1,7 @@
-<p>home works!</p>
+<div *ngIf="!stateAuth; else accessUser">
+  <app-login (val)="dataLogin($event)"></app-login>
+</div>
+
+<ng-template #accessUser>
+  <app-main stateAuth="{{ stateAuth }}"></app-main>
+</ng-template>

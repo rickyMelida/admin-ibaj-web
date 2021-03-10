@@ -8,6 +8,7 @@ import { CoverPageComponent } from "./cover-page/cover-page.component";
 import { PrayerComponent } from "./prayer/prayer.component";
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from '../shared/shared.module';
+import { HomeModule } from '../components/home/home.module';
 
 
 
@@ -24,7 +25,8 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    HomeModule
   ],
   exports: [
     AboutComponent,

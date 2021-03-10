@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { BackgroundImages } from 'src/app/models/background-images.interfaces';
-import { ImagesServiceService } from "../../services/images-service/images-service.service";
-import { AuthServiceService } from '../../services/auth-service/auth-service.service';
+import { ImagesServiceService } from "../../../services/images-service/images-service.service";
+import { AuthServiceService } from '../../../services/auth-service/auth-service.service';
 
 @Component({
   selector: 'app-main',
@@ -9,6 +9,9 @@ import { AuthServiceService } from '../../services/auth-service/auth-service.ser
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
+
+  @Input() stateAuth: boolean;
+
   coverPage: HTMLElement;
   pages: Array<string> = ['cover-page', 'about', 'activities', 'counseling', 'prayer', 'articles'];
   backgroundImages: BackgroundImages = {
@@ -25,18 +28,11 @@ export class MainComponent implements OnInit {
   constructor(private _imageService: ImagesServiceService, private _sesion: AuthServiceService) { }
 
   ngOnInit(): void {
-    this.userExist = this._sesion.existUser();
 
-    if(this.userExist) {
+    if(this.stateAuth) {
       this.getBackgroundImages()
       .then(res => {
-        this.backgroundImages.coverPage = res[0].main[0];
-        this.backgroundImages.about = res[0].nosotros[0];
-        this.backgroundImages.activities = res[0].actividades[0];
-        this.backgroundImages.counseling = res[0].consejos[0];
-        this.backgroundImages.prayer = res[0].oracion[0];
-        this.backgroundImages.articles = res[0].articulos[0];
-
+        this.setImages(res);
         this.setInElementsIdAndBackground(this.pages, this.backgroundImages);
       });
     }
@@ -65,8 +61,13 @@ export class MainComponent implements OnInit {
     });
   }
 
-  logout() {
-    this._sesion.logout();
+  setImages(src: unknown) {
+    this.backgroundImages.coverPage = src[0].main[0];
+    this.backgroundImages.about = src[0].nosotros[0];
+    this.backgroundImages.activities = src[0].actividades[0];
+    this.backgroundImages.counseling = src[0].consejos[0];
+    this.backgroundImages.prayer = src[0].oracion[0];
+    this.backgroundImages.articles = src[0].articulos[0];
   }
 
 

@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { AuthServiceService } from 'src/app/services/auth-service/auth-service.service';
+import { Component, OnInit, Input, Output, EventEmitter, ElementRef } from '@angular/core';
+import { LoginModel } from '../../../models/login.model';
 
 
 @Component({
@@ -9,43 +8,28 @@ import { AuthServiceService } from 'src/app/services/auth-service/auth-service.s
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  login = {
+  login : LoginModel = {
     email: '',
-    pass:''
+    pass:'',
+    existUser: false,
+    rememberMe: false
   }
+  @Output() val: EventEmitter<any> = new EventEmitter();
   user: boolean = false;
-  constructor(private auth: AuthServiceService, private route: Router) { }
+  chkRemember: HTMLFormElement;
+
+  constructor() { }
 
   ngOnInit(): void {
-    // this.loginEmail();
-  }
-
-  ingresar(ingreso: any) {
-
-  }
-
-  logout() {
-    this.auth.logout();
-  }
-
-  existUser():boolean {
-    if(this.auth.usuario.uid) {
-      this.user = true;
-    }
-    return this.user;
   }
 
   loginEmail() {
-    this.auth.loginEmail(this.login.email, this.login.pass)
-    .then(res=>{
-      alert('Excelente');
-      this.route.navigate(['home']);
-    })
-    .catch(err=>{
-      alert('Errror!!');
-    })
+    this.getRememberMe();
+    this.val.emit(this.login);
   }
 
-
-
+  getRememberMe() {
+    this.chkRemember = document.querySelector('#remember');
+    this.login.rememberMe =  this.chkRemember.checked;
+  }
 }
