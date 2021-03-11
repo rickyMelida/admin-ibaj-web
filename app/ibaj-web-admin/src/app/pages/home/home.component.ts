@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginModel } from '../../models/login.model';
 import { AuthServiceService } from 'src/app/services/auth-service/auth-service.service';
+import { DataUser } from 'src/app/models/dataUser.model';
 
 @Component({
   selector: 'app-home',
@@ -10,40 +11,26 @@ import { AuthServiceService } from 'src/app/services/auth-service/auth-service.s
 export class HomeComponent implements OnInit {
 
   stateAuth: boolean = false;
+  dataUser: DataUser;
 
   constructor( private auth: AuthServiceService)  { }
 
   ngOnInit(): void {
-    this.valueStateAuth();
+    this.valueStateAuthUser();
   }
 
-  valueStateAuth() {
+  valueStateAuthUser() {
     if(this.stateAuth || localStorage.getItem('stateAuth')) {
       this.stateAuth = true;
     }
   }
 
-  dataLogin(dataLogin: LoginModel) {
-    this.stateAuth = dataLogin.existUser;
-    this.loginWithEmail(dataLogin);
-    this.setRememberMe(dataLogin.rememberMe);
+  getdataUser(dataUser: DataUser) {
+    this.stateAuth = dataUser.auth;
   }
 
-  loginWithEmail (dataLogin: LoginModel) {
-    this.auth.loginEmail(dataLogin.email, dataLogin.pass)
-    .then(res=>{
-      alert('Excelente');
-      this.stateAuth = true;
-    })
-    .catch(err=>{
-      alert('Errror!!');
-    });
-  }
 
-  setRememberMe(rememberMe: boolean) {
-    if(rememberMe) {
-      localStorage.setItem('stateAuth', '{state : true}');
-    }
-  }
+
+
 
 }
