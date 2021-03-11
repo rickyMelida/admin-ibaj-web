@@ -1,1 +1,8 @@
-<router-outlet></router-outlet>
+<div *ngIf="!stateAuth; else accessUser">
+  <app-login (val)="getdataUser($event)"></app-login>
+</div>
+
+<ng-template #accessUser>
+  <app-menu></app-menu>
+  <router-outlet></router-outlet>
+</ng-template>

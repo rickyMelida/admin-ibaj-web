@@ -10,24 +10,12 @@ import { DataUser } from 'src/app/models/dataUser.model';
 })
 export class HomeComponent implements OnInit {
 
-  stateAuth: boolean = false;
-  dataUser: DataUser;
-
-  constructor( private auth: AuthServiceService)  { }
+  constructor()  { }
 
   ngOnInit(): void {
-    this.valueStateAuthUser();
   }
 
-  valueStateAuthUser() {
-    if(this.stateAuth || localStorage.getItem('stateAuth')) {
-      this.stateAuth = true;
-    }
-  }
 
-  getdataUser(dataUser: DataUser) {
-    this.stateAuth = dataUser.auth;
-  }
 
 
 

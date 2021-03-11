@@ -23,19 +23,15 @@ export class MainComponent implements OnInit {
     articles: ""
   };
 
-  userExist: boolean;
-
-  constructor(private _imageService: ImagesServiceService, private _sesion: AuthServiceService) { }
+  constructor(private _imageService: ImagesServiceService) { }
 
   ngOnInit(): void {
-
-    if(this.stateAuth) {
-      this.getBackgroundImages()
+    this.getBackgroundImages()
       .then(res => {
         this.setImages(res);
         this.setInElementsIdAndBackground(this.pages, this.backgroundImages);
       });
-    }
+
   }
 
   getBackgroundImages() {

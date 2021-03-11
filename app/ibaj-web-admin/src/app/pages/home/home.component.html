@@ -1,7 +1,1 @@
-<div *ngIf="!stateAuth; else accessUser">
-  <app-login (val)="getdataUser($event)"></app-login>
-</div>
-
-<ng-template #accessUser>
-  <app-main stateAuth="{{ stateAuth }}"></app-main>
-</ng-template>
+<app-main></app-main>

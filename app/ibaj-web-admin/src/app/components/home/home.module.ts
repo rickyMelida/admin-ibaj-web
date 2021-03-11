@@ -1,28 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
-import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { AppRoutingModule } from 'src/app/app.routing';
 
 
 
 @NgModule({
   declarations: [
-    LoginComponent,
     MainComponent
   ],
   exports: [
-    LoginComponent,
     MainComponent
   ],
   imports: [
     CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    AppRoutingModule
   ]
 })
 export class HomeModule { }

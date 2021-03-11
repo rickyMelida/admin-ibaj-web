@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter, ElementRef } from '@angular/core';
 import { DataUser } from 'src/app/models/dataUser.model';
+import { LoginModel } from 'src/app/models/login.model';
 import { AuthServiceService } from 'src/app/services/auth-service/auth-service.service';
-import { LoginModel } from '../../../models/login.model';
 
 
 @Component({

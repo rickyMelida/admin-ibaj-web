@@ -9,9 +9,7 @@ import { PrayerComponent } from "./prayer/prayer.component";
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from '../shared/shared.module';
 import { HomeModule } from '../components/home/home.module';
-
-
-
+import { AppRoutingModule } from '../app.routing';
 
 @NgModule({
   declarations: [
@@ -25,8 +23,9 @@ import { HomeModule } from '../components/home/home.module';
   ],
   imports: [
     CommonModule,
+    AppRoutingModule,
     SharedModule,
-    HomeModule
+    HomeModule,
   ],
   exports: [
     AboutComponent,

@@ -1,48 +1,39 @@
-<div *ngIf="stateAuth; else noUser">
-
-  <app-menu></app-menu>
-
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-3 m-4 col-sm-6 text-center" id="cover-page">
-        <span>
-          Portada
-        </span>
-      </div>
-      <div class="col-md-3 m-4 col-sm-6 text-center" id="about">
-        <span>
-          Nosotros
-        </span>
-      </div>
-      <div class="col-md-3 m-4 col-sm-6 text-center" id="activities">
-        <span>
-          Actividades
-        </span>
-
-      </div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-3 m-4 col-sm-6 text-center" id="cover-page">
+      <span [routerLink]="['/cover-page']" >
+        Portada
+      </span>
     </div>
-
-    <div class="row justify-content-center">
-      <div class="col-md-3 m-4 col-sm-6 text-center" id="counseling">
-        <span>
-          Consejeria
-        </span>
-      </div>
-      <div class="col-md-3 m-4 col-sm-6 text-center" id="prayer">
-        <span>
-          Motivos de Oración
-        </span>
-      </div>
-      <div class="col-md-3 m-4 col-sm-6 text-center" id="articles">
-        <span>
-          Articulos
-        </span>
-      </div>
+    <div class="col-md-3 m-4 col-sm-6 text-center" id="about">
+      <span [routerLink]="['/about']">
+        Nosotros
+      </span>
     </div>
+    <div class="col-md-3 m-4 col-sm-6 text-center" id="activities">
+      <span [routerLink]="['/activities']">
+        Actividades
+      </span>
 
+    </div>
   </div>
-</div>
 
-<ng-template #noUser>
-  <app-access-without-login></app-access-without-login>
-</ng-template>
+  <div class="row justify-content-center">
+    <div class="col-md-3 m-4 col-sm-6 text-center" id="counseling">
+      <span [routerLink]="['/counseling']">
+        Consejeria
+      </span>
+    </div>
+    <div class="col-md-3 m-4 col-sm-6 text-center" id="prayer">
+      <span [routerLink]="['/prayer']">
+        Motivos de Oración
+      </span>
+    </div>
+    <div class="col-md-3 m-4 col-sm-6 text-center" id="articles">
+      <span [routerLink]="['/articles']">
+        Articulos
+      </span>
+    </div>
+  </div>
+
+</div>
