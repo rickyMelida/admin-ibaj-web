@@ -10,6 +10,7 @@ import { TitlesComponent } from './titles/titles.component';
 import { VersesComponent } from './verses/verses.component';
 import { AppRoutingModule } from '../app.routing';
 import { LoginComponent } from './login/login.component';
+import { IconsModule } from '../icons/icons.module';
 
 
 
@@ -34,7 +35,8 @@ import { LoginComponent } from './login/login.component';
     CommonModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    IconsModule
   ]
 })
 export class SharedModule { }

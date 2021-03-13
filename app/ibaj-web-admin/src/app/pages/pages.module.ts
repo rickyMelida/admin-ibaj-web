@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { SharedModule } from '../shared/shared.module';
 import { HomeModule } from '../components/home/home.module';
 import { AppRoutingModule } from '../app.routing';
+import { CoverPageModule } from '../components/cover-page/cover-page.module';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { AppRoutingModule } from '../app.routing';
     AppRoutingModule,
     SharedModule,
     HomeModule,
+    CoverPageModule
   ],
   exports: [
     AboutComponent,
