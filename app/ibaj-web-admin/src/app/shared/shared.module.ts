@@ -11,6 +11,9 @@ import { VersesComponent } from './verses/verses.component';
 import { AppRoutingModule } from '../app.routing';
 import { LoginComponent } from './login/login.component';
 import { IconsModule } from '../icons/icons.module';
+import { SeparateSeccionWhithTitleComponent } from './separate-seccion-whith-title/separate-seccion-whith-title.component';
+import { ServicesOfMinistryComponent } from './services-of-ministry/services-of-ministry.component';
+import { DateComponent } from './date/date.component';
 
 
 
@@ -21,7 +24,10 @@ import { IconsModule } from '../icons/icons.module';
     LoginComponent,
     MenuComponent,
     TitlesComponent,
-    VersesComponent
+    VersesComponent,
+    SeparateSeccionWhithTitleComponent,
+    ServicesOfMinistryComponent,
+    DateComponent
   ],
   exports: [
     AccessWithoutLoginComponent,
@@ -29,7 +35,9 @@ import { IconsModule } from '../icons/icons.module';
     LoginComponent,
     MenuComponent,
     TitlesComponent,
-    VersesComponent
+    VersesComponent,
+    SeparateSeccionWhithTitleComponent,
+    DateComponent
   ],
   imports: [
     CommonModule,

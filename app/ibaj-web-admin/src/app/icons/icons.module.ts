@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 
 
 import { BootstrapIconsModule } from 'ng-bootstrap-icons';
-import { PenFill, TrashFill } from 'ng-bootstrap-icons/icons';
+import { PenFill, TrashFill, EyeFill } from 'ng-bootstrap-icons/icons';
 
 const icons = {
   PenFill,
-  TrashFill
+  TrashFill,
+  EyeFill
 };
 
 

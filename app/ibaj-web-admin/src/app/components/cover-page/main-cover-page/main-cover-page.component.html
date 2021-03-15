@@ -1,17 +1,31 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
+    <div class="col-md-10 offset-md-1">
+      <app-separate-seccion-whith-title [title_section]="'Imágenes de Portada'"></app-separate-seccion-whith-title>
+    </div>
+
+    <div class="col-md-8 offset-md-2">
       <app-backgrounds></app-backgrounds>
     </div>
-    <div class="col-md-4"></div>
   </div>
 
   <div class="row mt-5">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
+    <div class="col-md-10 offset-md-1">
+      <app-separate-seccion-whith-title [title_section]="'Titulo'"></app-separate-seccion-whith-title>
+    </div>
+
+    <div class="col-md-8 offset-md-2">
       <app-titles></app-titles>
     </div>
-    <div class="col-md-3"></div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-md-10 offset-md-1">
+      <app-separate-seccion-whith-title [title_section]="'Versiculos'"></app-separate-seccion-whith-title>
+    </div>
+
+    <div class="col-md-8 offset-md-2">
+      <app-verses></app-verses>
+    </div>
   </div>
 </div>

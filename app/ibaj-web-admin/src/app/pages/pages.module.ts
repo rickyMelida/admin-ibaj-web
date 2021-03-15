@@ -11,6 +11,8 @@ import { SharedModule } from '../shared/shared.module';
 import { HomeModule } from '../components/home/home.module';
 import { AppRoutingModule } from '../app.routing';
 import { CoverPageModule } from '../components/cover-page/cover-page.module';
+import { AboutModule } from '../components/about/about.module';
+import { ActivitiesModule } from '../components/activities/activities.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { CoverPageModule } from '../components/cover-page/cover-page.module';
     AppRoutingModule,
     SharedModule,
     HomeModule,
-    CoverPageModule
+    CoverPageModule,
+    AboutModule,
+    ActivitiesModule
   ],
   exports: [
     AboutComponent,
