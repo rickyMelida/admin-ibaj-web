@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainActivitiesComponent implements OnInit {
 
+  activities: Array<any> = [1, 2, 3,];
+
   constructor() { }
 
   ngOnInit(): void {

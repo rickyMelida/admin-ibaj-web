@@ -5,8 +5,9 @@ import { DescriptionComponent } from './description/description.component';
 import { LocationComponent } from './location/location.component';
 import { ImagesComponent } from './images/images.component';
 import { MainActivitiesComponent } from './main-activities/main-activities.component';
-import { SharedModule } from 'src/app/shared/shared.module';
 import { IconsModule } from 'src/app/icons/icons.module';
+import { DateTimeComponent } from './date-time/date-time.component';
+import { AddressComponent } from './address/address.component';
 
 
 
@@ -16,14 +17,15 @@ import { IconsModule } from 'src/app/icons/icons.module';
     DescriptionComponent,
     LocationComponent,
     ImagesComponent,
-    MainActivitiesComponent
+    MainActivitiesComponent,
+    DateTimeComponent,
+    AddressComponent
   ],
   exports: [
     MainActivitiesComponent
   ],
   imports: [
     CommonModule,
-    SharedModule,
     IconsModule
   ]
 })

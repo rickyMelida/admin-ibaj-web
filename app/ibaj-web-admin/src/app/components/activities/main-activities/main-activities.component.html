@@ -1,25 +1,532 @@
 <div class="container">
-  <div class="row my-3">
-    <div class="col-md-12">
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="Imagen">
+
+  <!---------------------- ROW 1 ------------------------------->
+  <div class="row my-5">
+
+    <!---------------------- COL 1 ------------------------------->
+    <div class="col-md-4">
+      <div class="card">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/editoriales-ibpr.appspot.com/o/activities%2Fact_1.jpg?alt=media&token=e18ba2cb-7d11-441b-a475-114180ec396b"
+          class="card-img-top" alt="Imagen">
+          <app-images></app-images>
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+          <h5 class="card-title d-inline mr-2">Titulo Actividad</h5>
+          <app-name class="d-block"></app-name>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-        </ul>
+
         <div class="card-body">
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                    data-target="#description" aria-expanded="true" aria-controls="description">
+                    Descripcion
+                  </button>
+                </h2>
+              </div>
+              <div id="description" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  Descripcion de la actividad..
+                  <app-description class="d-block"></app-description>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                    data-target="#date" aria-expanded="true" aria-controls="date">
+                    Fecha y Hora
+                  </button>
+                </h2>
+              </div>
+              <div id="date" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  Sábado 30 de Julio de 2020 <br> 19:00 hs
+                  <app-date-time class="d-block"></app-date-time>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#address" aria-expanded="false" aria-controls="collapseThree">
+                    Dirección
+                  </button>
+                </h2>
+              </div>
+              <div id="address" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                  Avda Fernando de la Mora e/ Lopez Decoud
+                  <app-address class="d-block"></app-address>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#location" aria-expanded="false" aria-controls="collapseThree">
+                    Lugar
+                  </button>
+                </h2>
+              </div>
+              <div id="location" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                  Iglesia Bautista Panambi Reta
+                  <app-location class="d-block"></app-location>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
+    <!---------------------- COL 2 ------------------------------->
+    <div class="col-md-4">
+      <div class="card">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/editoriales-ibpr.appspot.com/o/activities%2Fact_1.jpg?alt=media&token=e18ba2cb-7d11-441b-a475-114180ec396b"
+          class="card-img-top" alt="Imagen">
+          <app-images></app-images>
+        <div class="card-body">
+
+          <h5 class="card-title d-inline mr-2">Titulo Actividad</h5>
+          <app-name class="d-block"></app-name>
+        </div>
+
+        <div class="card-body">
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                    data-target="#description" aria-expanded="true" aria-controls="description">
+                    Descripcion
+                  </button>
+                </h2>
+              </div>
+              <div id="description" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  Descripcion de la actividad..
+                  <app-description class="d-block"></app-description>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                    data-target="#date" aria-expanded="true" aria-controls="date">
+                    Fecha y Hora
+                  </button>
+                </h2>
+              </div>
+              <div id="date" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  Sábado 30 de Julio de 2020 <br> 19:00 hs
+                  <app-date-time class="d-block"></app-date-time>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#address" aria-expanded="false" aria-controls="collapseThree">
+                    Dirección
+                  </button>
+                </h2>
+              </div>
+              <div id="address" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                  Avda Fernando de la Mora e/ Lopez Decoud
+                  <app-address class="d-block"></app-address>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#location" aria-expanded="false" aria-controls="collapseThree">
+                    Lugar
+                  </button>
+                </h2>
+              </div>
+              <div id="location" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                  Iglesia Bautista Panambi Reta
+                  <app-location class="d-block"></app-location>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---------------------- COL 3------------------------------->
+    <div class="col-md-4">
+      <div class="card">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/editoriales-ibpr.appspot.com/o/activities%2Fact_1.jpg?alt=media&token=e18ba2cb-7d11-441b-a475-114180ec396b"
+          class="card-img-top" alt="Imagen">
+          <app-images></app-images>
+        <div class="card-body">
+
+          <h5 class="card-title d-inline mr-2">Titulo Actividad</h5>
+          <app-name class="d-block"></app-name>
+        </div>
+
+        <div class="card-body">
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                    data-target="#description" aria-expanded="true" aria-controls="description">
+                    Descripcion
+                  </button>
+                </h2>
+              </div>
+              <div id="description" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  Descripcion de la actividad..
+                  <app-description class="d-block"></app-description>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                    data-target="#date" aria-expanded="true" aria-controls="date">
+                    Fecha y Hora
+                  </button>
+                </h2>
+              </div>
+              <div id="date" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  Sábado 30 de Julio de 2020 <br> 19:00 hs
+                  <app-date-time class="d-block"></app-date-time>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#address" aria-expanded="false" aria-controls="collapseThree">
+                    Dirección
+                  </button>
+                </h2>
+              </div>
+              <div id="address" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                  Avda Fernando de la Mora e/ Lopez Decoud
+                  <app-address class="d-block"></app-address>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#location" aria-expanded="false" aria-controls="collapseThree">
+                    Lugar
+                  </button>
+                </h2>
+              </div>
+              <div id="location" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                  Iglesia Bautista Panambi Reta
+                  <app-location class="d-block"></app-location>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
+  <!---------------------- ROW 2 ------------------------------->
+  <div class="row my-5">
 
+    <!---------------------- COL 1 ------------------------------->
+    <div class="col-md-4">
+      <div class="card">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/editoriales-ibpr.appspot.com/o/activities%2Fact_1.jpg?alt=media&token=e18ba2cb-7d11-441b-a475-114180ec396b"
+          class="card-img-top" alt="Imagen">
+          <app-images></app-images>
+        <div class="card-body">
+
+          <h5 class="card-title d-inline mr-2">Titulo Actividad</h5>
+          <app-name class="d-block"></app-name>
+        </div>
+
+        <div class="card-body">
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                    data-target="#description" aria-expanded="true" aria-controls="description">
+                    Descripcion
+                  </button>
+                </h2>
+              </div>
+              <div id="description" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  Descripcion de la actividad..
+                  <app-description class="d-block"></app-description>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                    data-target="#date" aria-expanded="true" aria-controls="date">
+                    Fecha y Hora
+                  </button>
+                </h2>
+              </div>
+              <div id="date" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  Sábado 30 de Julio de 2020 <br> 19:00 hs
+                  <app-date-time class="d-block"></app-date-time>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#address" aria-expanded="false" aria-controls="collapseThree">
+                    Dirección
+                  </button>
+                </h2>
+              </div>
+              <div id="address" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                  Avda Fernando de la Mora e/ Lopez Decoud
+                  <app-address class="d-block"></app-address>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#location" aria-expanded="false" aria-controls="collapseThree">
+                    Lugar
+                  </button>
+                </h2>
+              </div>
+              <div id="location" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                  Iglesia Bautista Panambi Reta
+                  <app-location class="d-block"></app-location>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---------------------- COL 2 ------------------------------->
+    <div class="col-md-4">
+      <div class="card">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/editoriales-ibpr.appspot.com/o/activities%2Fact_1.jpg?alt=media&token=e18ba2cb-7d11-441b-a475-114180ec396b"
+          class="card-img-top" alt="Imagen">
+          <app-images></app-images>
+        <div class="card-body">
+
+          <h5 class="card-title d-inline mr-2">Titulo Actividad</h5>
+          <app-name class="d-block"></app-name>
+        </div>
+
+        <div class="card-body">
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                    data-target="#description" aria-expanded="true" aria-controls="description">
+                    Descripcion
+                  </button>
+                </h2>
+              </div>
+              <div id="description" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  Descripcion de la actividad..
+                  <app-description class="d-block"></app-description>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                    data-target="#date" aria-expanded="true" aria-controls="date">
+                    Fecha y Hora
+                  </button>
+                </h2>
+              </div>
+              <div id="date" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  Sábado 30 de Julio de 2020 <br> 19:00 hs
+                  <app-date-time class="d-block"></app-date-time>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#address" aria-expanded="false" aria-controls="collapseThree">
+                    Dirección
+                  </button>
+                </h2>
+              </div>
+              <div id="address" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                  Avda Fernando de la Mora e/ Lopez Decoud
+                  <app-address class="d-block"></app-address>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#location" aria-expanded="false" aria-controls="collapseThree">
+                    Lugar
+                  </button>
+                </h2>
+              </div>
+              <div id="location" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                  Iglesia Bautista Panambi Reta
+                  <app-location class="d-block"></app-location>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---------------------- COL 3 ------------------------------->
+    <div class="col-md-4">
+      <div class="card">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/editoriales-ibpr.appspot.com/o/activities%2Fact_1.jpg?alt=media&token=e18ba2cb-7d11-441b-a475-114180ec396b"
+          class="card-img-top" alt="Imagen">
+          <app-images></app-images>
+        <div class="card-body">
+
+          <h5 class="card-title d-inline mr-2">Titulo Actividad</h5>
+          <app-name class="d-block"></app-name>
+        </div>
+
+        <div class="card-body">
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                    data-target="#description" aria-expanded="true" aria-controls="description">
+                    Descripcion
+                  </button>
+                </h2>
+              </div>
+              <div id="description" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  Descripcion de la actividad..
+                  <app-description class="d-block"></app-description>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                    data-target="#date" aria-expanded="true" aria-controls="date">
+                    Fecha y Hora
+                  </button>
+                </h2>
+              </div>
+              <div id="date" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  Sábado 30 de Julio de 2020 <br> 19:00 hs
+                  <app-date-time class="d-block"></app-date-time>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#address" aria-expanded="false" aria-controls="collapseThree">
+                    Dirección
+                  </button>
+                </h2>
+              </div>
+              <div id="address" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                  Avda Fernando de la Mora e/ Lopez Decoud
+                  <app-address class="d-block"></app-address>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#location" aria-expanded="false" aria-controls="collapseThree">
+                    Lugar
+                  </button>
+                </h2>
+              </div>
+              <div id="location" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                  Iglesia Bautista Panambi Reta
+                  <app-location class="d-block"></app-location>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</div>

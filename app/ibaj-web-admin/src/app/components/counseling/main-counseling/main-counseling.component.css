@@ -1,8 +1,4 @@
-a:hover {
-  cursor: pointer;
-}
-
-app-images {
+app-image {
   position: relative;
   top: 35%;
   left: 40%;

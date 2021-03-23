@@ -13,6 +13,7 @@ import { AppRoutingModule } from '../app.routing';
 import { CoverPageModule } from '../components/cover-page/cover-page.module';
 import { AboutModule } from '../components/about/about.module';
 import { ActivitiesModule } from '../components/activities/activities.module';
+import { CounselingModule } from '../components/counseling/counseling.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ActivitiesModule } from '../components/activities/activities.module';
     HomeModule,
     CoverPageModule,
     AboutModule,
-    ActivitiesModule
+    ActivitiesModule,
+    CounselingModule
   ],
   exports: [
     AboutComponent,
