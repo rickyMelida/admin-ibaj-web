@@ -5,7 +5,7 @@ import { DescriptionComponent } from './description/description.component';
 import { LocationComponent } from './location/location.component';
 import { ImagesComponent } from './images/images.component';
 import { MainActivitiesComponent } from './main-activities/main-activities.component';
-import { IconsModule } from 'src/app/icons/icons.module';
+import { IconsModule } from '../icons/icons.module';
 import { DateTimeComponent } from './date-time/date-time.component';
 import { AddressComponent } from './address/address.component';
 

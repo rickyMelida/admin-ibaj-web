@@ -11,7 +11,7 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
 
 import { environment } from 'src/environments/environment';
 import { PagesModule } from './pages/pages.module';
-import { SharedModule } from './shared/shared.module';
+import { SharedModule } from './components/shared/shared.module';
 
 
 @NgModule({

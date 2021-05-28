@@ -8,13 +8,13 @@ import { CommentsComponent } from './comments/comments.component';
 import { MenuComponent } from "./menu/menu.component";
 import { TitlesComponent } from './titles/titles.component';
 import { VersesComponent } from './verses/verses.component';
-import { AppRoutingModule } from '../app.routing';
+import { AppRoutingModule } from '../../app.routing';
 import { LoginComponent } from './login/login.component';
 import { IconsModule } from '../icons/icons.module';
 import { SeparateSeccionWhithTitleComponent } from './separate-seccion-whith-title/separate-seccion-whith-title.component';
 import { ServicesOfMinistryComponent } from './services-of-ministry/services-of-ministry.component';
 import { DateComponent } from './date/date.component';
-
+import { ArticlesModule } from './articles/articles.module';
 
 
 @NgModule({
@@ -37,14 +37,16 @@ import { DateComponent } from './date/date.component';
     TitlesComponent,
     VersesComponent,
     SeparateSeccionWhithTitleComponent,
-    DateComponent
+    DateComponent,
+    ArticlesModule
   ],
   imports: [
     CommonModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    IconsModule
+    IconsModule,
+    ArticlesModule
   ]
 })
 export class SharedModule { }

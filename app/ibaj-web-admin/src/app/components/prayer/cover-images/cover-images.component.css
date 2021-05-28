@@ -1,0 +1,14 @@
+a bi {
+  color: rgb(105, 108, 110);
+  opacity: 0.3;
+}
+
+a bi:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.active {
+  color: rgb(105, 108, 110);
+  opacity: 1;
+}
